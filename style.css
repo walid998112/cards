@@ -1,0 +1,253 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:VeniteAdoremus-rgRBA ;
+    src: url(VeniteAdoremus-rgRBA.ttf);
+}
+body {
+    font-family: VeniteAdoremus-rgRBA;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Navbar Styles */
+header {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e94560;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f3460;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #e94560;
+}
+
+/* Home Section */
+#home {
+    padding: 120px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    background-image: url(https://images.wallpapersden.com/image/download/jinx-the-warrior-hd-league-of-legends_bmhlaGuUmZqaraWkpJRma2VlrW5lZQ.jpg);
+}
+
+#home h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 1s forwards 0.5s; /* Fade-in effect */
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 1s forwards 0.7s; /* Fade-in effect */
+}
+
+#home .cta-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#home .cta-btn:hover {
+    background-color: #f07c82;
+}
+
+/* Product Section */
+.products-section {
+    padding: 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0f3460;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden for animation */
+}
+
+.product-card.show {
+    opacity: 1; /* Show when the animation is triggered */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #0f3460;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 1rem;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.shop-now {
+    background-color: #e94560;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: #f07c82;
+}
+
+/* Button Ripple Effect */
+.shop-now {
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-now .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: ripple-animation 0.5s linear;
+    transform: scale(0);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* Footer Section */
+footer {
+    padding: 30px;
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e94560;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
